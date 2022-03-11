@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Folders from "./components/Folders";
 
 export default function App() {
@@ -39,9 +39,10 @@ export default function App() {
       parent_id: 5,
     },
   ];
+  const [data, setData] = useState(input);
   return (
     <div>
-      <Folders folders={input} />
+      <Folders folders={data} setData={setData} />
     </div>
   );
 }
